@@ -3,5 +3,5 @@ run:
 config:
 	streamlit config show
 html:
-	pandoc README.md -o index.html
+	pandoc README.md -o index.html --template=template.html
 
