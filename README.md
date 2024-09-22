@@ -6,14 +6,10 @@ date: "2024-09-28"
 
 # 個人の異聴傾向を考慮した「聞き間違えやすい語」の予測<br>--—単語分散表現と確率、編集距離の応用---
 
-岸山 健(東京大学) 野口 大斗(東京医科歯科大学) 黄 竹佑(名古屋学院大学)<br>
+<div style="text-align: center;">
+<p>岸山 健(東京大学) 野口 大斗(東京医科歯科大学) 黄竹佑(名古屋学院大学)<br>
 kishiyama.t@gmail.com, noguchih425@gmail.com,<br>
-huangcy.ut@gmail.com
-
-岸山 健(東京大学)
-野口 大斗<br>
-黄 竹佑(名古屋学院大学)<br>
-
+huangcy.ut@gmail.com</p>
 
 ## Abstract
 
