@@ -11,6 +11,8 @@ date: "2024-09-28"
 kishiyama.t@gmail.com, noguchih425@gmail.com,<br>
 huangcy.ut@gmail.com</p>
 
+Demo Site: [http://www.kikoepred.com/](http://www.kikoepred.com/)
+
 ## Abstract
 
 本研究では、「渋谷--日比谷」などに見られる聞き間違えやすい語のペアを抽出する報告
@@ -35,7 +37,4 @@ huangcy.ut@gmail.com</p>
 語の背景や個人差に基づく異聴傾向を組み込んだ予測の実現性を示した。本研究の結果は、
 難聴者の個別対応を含む言語訓練や対話の新たなアプローチに有意義な示唆を提供する。
 
-## Demo Site
-
-[ウェブサイト](http://www.kikoepred.com/)で論文のデモを利用できます。
 
