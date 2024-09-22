@@ -10,6 +10,7 @@ date: "2024-09-28"
 <p>岸山 健(東京大学) 野口 大斗(東京医科歯科大学) 黄竹佑(名古屋学院大学)<br>
 kishiyama.t@gmail.com, noguchih425@gmail.com,<br>
 huangcy.ut@gmail.com</p>
+</div>
 
 Demo Site: [http://www.kikoepred.com/](http://www.kikoepred.com/)
 
