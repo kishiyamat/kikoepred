@@ -2,50 +2,59 @@
 body {
     font-family: '游明朝', 'Yu Mincho', 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'MS P明朝', 'MS PMincho', serif;
     font-size: 14pt;
-    line-height: 1.5;
+    line-height: 1.8; /* 行間を広げて可読性を向上 */
     background-color: #ffffff;
     color: #000000;
     margin: 0;
-    padding: 0;
+    padding: 20px;
 }
 
 /* コンテナのレイアウト */
 .container {
-    width: 70%;
+    width: 70%; /* 全体の幅を調整 */
     margin: 0 auto;
     padding: 20px;
 }
 
-/* タイトルページのスタイル */
-.title-page {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.title-page h1 {
+/* 見出しのスタイル */
+h1 {
     font-size: 24pt;
-    margin-bottom: 10px;
-}
-
-.title-page h2 {
-    font-size: 18pt;
-    margin-bottom: 10px;
-}
-
-/* セクションのスタイル */
-h2 {
+    text-align: center;
+    line-height: 1.5; /* 改行した部分も自然に見えるよう調整 */
+    margin-bottom: 30px;
     font-weight: bold;
-    color: #333333;
-    border-bottom: 2px solid #000000;
-    padding-bottom: 5px;
+}
+
+h2 {
+    font-size: 18pt;
     margin-top: 40px;
     margin-bottom: 20px;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+    color: #333333;
 }
 
-/* 参考文献のスタイル */
-.references ol {
-    margin-top: 20px;
-    margin-left: 20px;
+/* 段落のスタイル */
+p {
+    font-size: 14pt;
+    line-height: 1.8;
+    margin-bottom: 20px; /* 各段落の間に余白を追加 */
+}
+
+/* リンクのスタイル */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 水平線（hr）のスタイル */
+hr {
+    border: 1px solid #cccccc;
+    margin: 30px 0;
 }
 
 /* 印刷用のスタイル */
@@ -55,6 +64,7 @@ h2 {
         font-size: 12pt;
         line-height: 1.5;
     }
+
     h1, h2, h3 {
         color: black;
     }
