@@ -1,0 +1,62 @@
+/* 基本的なスタイル */
+body {
+    font-family: '游明朝', 'Yu Mincho', 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'MS P明朝', 'MS PMincho', serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* コンテナのレイアウト */
+.container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* タイトルページのスタイル */
+.title-page {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.title-page h1 {
+    font-size: 24pt;
+    margin-bottom: 10px;
+}
+
+.title-page h2 {
+    font-size: 18pt;
+    margin-bottom: 10px;
+}
+
+/* セクションのスタイル */
+h2 {
+    font-weight: bold;
+    color: #333333;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 5px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* 参考文献のスタイル */
+.references ol {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+/* 印刷用のスタイル */
+@media print {
+    body {
+        font-family: '游明朝', 'Yu Mincho', 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'MS P明朝', 'MS PMincho', serif;
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    h1, h2, h3 {
+        color: black;
+    }
+}
+
