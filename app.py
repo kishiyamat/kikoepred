@@ -38,38 +38,6 @@ div[data-testid="stToolbar"] {
 div[data-testid="stDecoration"] {
     z-index: 100;
 }
-
-/* # https://github.com/streamlit/streamlit/issues/395 */
-#MainMenu {visibility: hidden;}
-
-/* # https://discuss.streamlit.io/t/remove-hide-running-man-animation-on-top-of-page/21773/3 */
-div[data-testid="stToolbar"] {
-visibility: hidden;
-height: 0%;
-position: fixed;
-}
-div[data-testid="stDecoration"] {
-visibility: hidden;
-height: 0%;
-position: fixed;
-}
-div[data-testid="stStatusWidget"] {
-visibility: hidden;
-height: 0%;
-position: fixed;
-}
-#MainMenu {
-visibility: hidden;
-height: 0%;
-}
-header {
-visibility: hidden;
-height: 0%;
-}
-footer {
-visibility: hidden;
-height: 0%;
-}
 </style>
 '''
 st.markdown(hide, unsafe_allow_html=True)
