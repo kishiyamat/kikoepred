@@ -3,4 +3,4 @@ hideTopBar = true
 
 [client]
 toolbarMode = "minimal"
-showSidebarNavigation = true
+showSidebarNavigation = false
