@@ -3,7 +3,6 @@ from util import load_model, load_word_freq, load_word_kana, all_phonemes
 from note import note_intro, note_post, note_future
 from distance_computer import DisanceComputer
 from streamlit_ui import StreamlitUI
-from janome.tokenizer import Tokenizer
 
 st.set_page_config(
     page_title="Kikoe Pred",
@@ -51,13 +50,12 @@ word_freq = load_word_freq()
 word_kana = load_word_kana()
 vocabulary_size = len(word_freq)
 freq = load_word_freq()
-tokenizer = Tokenizer()
 
 # init UI
 slui = StreamlitUI()
 slui.choose_confusion_matrix_pattern()
 slui.set_confusion_matrix(slui.cm_pattern, N)
-dc = DisanceComputer(slui.confusion_matrix, model, freq, word_kana, tokenizer, N, 1000)
+dc = DisanceComputer(slui.confusion_matrix, model, freq, word_kana, N, 1000)
 slui.size_note.write(note_intro(vocabulary_size))
 
 # 単語の指定

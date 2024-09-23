@@ -3,12 +3,11 @@ import pandas as pd
 from util import kana_to_romaji, phoneme_pattern, decompose_string
 
 class DisanceComputer:
-    def __init__(self, confusion_matrix, language_model, freqency, word_kana, tokenizer, N, TOP_N=1000):
+    def __init__(self, confusion_matrix, language_model, freqency, word_kana, N, TOP_N=1000):
         self.confusion_matrix = confusion_matrix
         self.language_model = language_model
         self.freqency =freqency
         self.word_kana =word_kana
-        self.tokenizer = tokenizer
         self.TOP_N =TOP_N
         self.N = N
         cm = self.confusion_matrix.copy()
@@ -19,12 +18,6 @@ class DisanceComputer:
                 cm.iat[j, i] = cm.iat[j, i] / denom
         self.confusion_matrix_norm  = cm
         self.results = pd.DataFrame([], columns=["entity", "similarity", "freq", "phoneme_dist", "phoneme", "score"])
-
-    def get_token(self, word):
-        # TODO: これもさっさと辞書にするなりして外に出す
-        # 単語をトークンに分割
-        # トークンの品詞情報を取得して返す
-        return self.tokenizer.tokenize(word).__next__()
 
     def get_pos(self, token):
         return token.part_of_speech.split(",")[0]
