@@ -38,6 +38,9 @@ div[data-testid="stToolbar"] {
 div[data-testid="stDecoration"] {
     z-index: 100;
 }
+
+/* # https://github.com/streamlit/streamlit/issues/395 */
+#MainMenu {visibility: hidden;}
 </style>
 '''
 st.markdown(hide, unsafe_allow_html=True)
