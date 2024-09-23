@@ -59,7 +59,6 @@ slui.choose_confusion_matrix_pattern()
 slui.set_confusion_matrix(slui.cm_pattern, N)
 dc = DisanceComputer(slui.confusion_matrix, model, freq, word_kana, tokenizer, N, 1000)
 slui.size_note.write(note_intro(vocabulary_size))
-slui.show_confusion_matrix(slui.confusion_matrix, N)
 
 # 単語の指定
 slui.set_intended_word()
@@ -72,7 +71,6 @@ dc.set_phoneme_dist(slui.intended_speech)
 st.write("### Normalized")
 st.write(note_post)
 dc.assign_log()
-slui.draw_sim_freq_aud(dc.results)
 
 st.write("### Results")
 slui.set_weights()

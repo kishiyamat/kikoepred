@@ -1,4 +1,3 @@
-import plotly.express as px
 import itertools
 import pandas as pd
 import streamlit as st
@@ -52,53 +51,6 @@ class StreamlitUI:
 
     def set_confusion_matrix(self, cm_pattern, N):
         self.confusion_matrix = StreamlitUI.get_confusion_matrix(cm_pattern, N) 
-
-    @staticmethod
-    def show_confusion_matrix(confusion_matrix, N):
-        fig = px.imshow(
-            confusion_matrix,
-            labels=dict(x="Stimulus", y="Response", color="Ratio"),
-            x=ordered,
-            y=ordered,
-            color_continuous_scale="Viridis"
-        )
-        fig.update_layout(
-            title="Phoneme Confusion Matrix",
-            xaxis=dict(tickmode='array', tickvals=list(
-                range(N)), ticktext=ordered),
-            yaxis=dict(tickmode='array', tickvals=list(
-                range(N)), ticktext=ordered),
-            coloraxis_colorbar=dict(
-                title="Ratio",
-                x=0.73,  # X軸からの距離を調整
-                y=0.5,   # Y軸の中央に配置
-                len=0.9,  # レジェンドの長さを調整
-                thickness=20,  # レジェンドの幅を調整
-            ),
-        )
-        st.plotly_chart(fig)
-
-    @staticmethod
-    def draw_sim_freq_aud(df):
-        # Similarity のヒストグラム
-        res_s_1, res_f_1, res_d_1  = st.columns(3)
-        fig_similarity = px.histogram(df, x='similarity', nbins=10, title='Histogram of Similarity')
-        res_s_1.plotly_chart(fig_similarity)
-
-        fig_freq = px.histogram(df, x='freq', nbins=10, title='Histogram of Frequency')
-        res_f_1.plotly_chart(fig_freq)
-
-        fig_audio_distance = px.histogram(df, x='phoneme_dist', nbins=10, title='Histogram of Phoneme Distance')
-        res_d_1.plotly_chart(fig_audio_distance)
-
-        res_s_2, res_f_2, res_d_2  = st.columns(3)
-        res_s_2.plotly_chart(fig_similarity)
-
-        fig_freq = px.histogram(df, x='freq_log_norm', nbins=10, title='Histogram of Frequency (log)')
-        res_f_2.plotly_chart(fig_freq)
-
-        fig_audio_distance = px.histogram(df, x='phoneme_sim_norm', nbins=10, title='Histogram of 1-(Phoneme Distance/Max Phonemes)')
-        res_d_2.plotly_chart(fig_audio_distance)
 
     def set_intended_word(self):
         st.write("### Intended Word")

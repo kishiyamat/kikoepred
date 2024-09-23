@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-import pandas as pd
 from util import kana_to_romaji, phoneme_pattern, decompose_string
 
 class DisanceComputer:
