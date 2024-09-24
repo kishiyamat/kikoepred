@@ -50,14 +50,14 @@ phoneme_pattern = "|".join(sorted(all_phonemes, key=len, reverse=True))
 def decompose_string(s: str, pattern) -> list[str]:
     return re.findall(pattern, s)
 
-@st.cache_data
+@st.cache_resource
 def load_model():
     model_dir = 'data/new_entity_vector.model.bin'
     model = gensim.models.Word2Vec.load(model_dir)
     return model
 
 
-@st.cache_data
+@st.cache_resource
 def load_word_freq():
     # pkl形式で保存したCounterオブジェクトを読み込む
     # https://github.com/kishiyamat/la-kentei-yaminabe/blob/main/notebooks/talking_aid_word_freq.ipynb
@@ -65,7 +65,7 @@ def load_word_freq():
         return pickle.load(f)
 
 
-@st.cache_data
+@st.cache_resource
 def load_word_kana():
     with open("data/word_kana.pkl", "rb") as f:
         return pickle.load(f)
