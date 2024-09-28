@@ -53,15 +53,19 @@ freq = load_word_freq()
 
 # init UI
 slui = StreamlitUI()
+
+# 単語の指定
+slui.set_intended_word()
+
 slui.choose_confusion_matrix_pattern()
 slui.set_confusion_matrix(slui.cm_pattern, N)
 dc = DisanceComputer(slui.confusion_matrix, model, freq, word_kana, N, 1000)
 slui.size_note.write(note_intro(vocabulary_size))
 
-# 単語の指定
-slui.set_intended_word()
-slui.validate_intended_word(word_freq.keys())
 slui.set_intended_speech(dc.word_to_phoneme)
+
+slui.validate_intended_word(word_freq.keys())
+
 
 # dcで計算しでdc.resultsを加工していく
 dc.set_similarity_df(slui.intended_word)
@@ -69,6 +73,7 @@ dc.set_phoneme_dist(slui.intended_speech)
 st.write("### Normalized")
 st.write(note_post)
 dc.assign_log()
+
 
 st.write("### Results")
 slui.set_weights()

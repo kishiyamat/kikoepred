@@ -8,10 +8,11 @@ from note import note_cm, intend_note, note_all
 class StreamlitUI:
     def __init__(self):
         st.write("## Kikoe Pred")
+        st.write("日本音声学会2024で公開した研究のデモです。要旨: [https://kishiyamat.github.io/kikoepred](https://kishiyamat.github.io/kikoepred) ")
         self.size_note = st.empty()
-        st.write("### Phoneme Confusion Matrix Visualization")
         
     def choose_confusion_matrix_pattern(self):
+        st.write("### Confusion Matrix")
         st.write(note_cm)
         self.cm_pattern_radio = st.empty()
         self.plot_cm = st.empty()
@@ -19,8 +20,8 @@ class StreamlitUI:
         cm_pattern = self.cm_pattern_radio.radio(
             "confusion matrix の種類",
             [
-                "none: 全て1 (ベースライン)",
                 "simple: 単純な混合行列でktshの4種類が区別できません。",
+                "none: 全て1 (ベースライン)",
                 "shitara1972-L3-kths-all: 設楽(1972)のL3",
                 "shitara1972-L3-kths: 設楽(1972)のL3でkthsが困難なケース",
             ])
